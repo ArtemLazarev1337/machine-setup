@@ -11,11 +11,11 @@
   "disable_ai": true,
   "ssh_connections": [
     {
-      "host": "ubuntu-vm",
+      "host": "ubuntu-server",
       "args": [],
       "projects": [
         {
-          "paths": ["/home/artem"],
+          "paths": ["/opt/stacks"],
         },
       ],
     },

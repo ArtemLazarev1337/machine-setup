@@ -1,8 +1,9 @@
-vim.o.mouse = 'a'
-vim.wo.number = true
-vim.o.tabstop = 2
-vim.o.shiftwidth = 2
-vim.o.expandtab = true
+-- Базовые настройки
+vim.opt.mouse = 'a'
+vim.opt.number = true
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -11,38 +12,31 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     "clone",
     "--filter=blob:none",
     "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
+    "--branch=stable",
     lazypath,
   })
 end
 vim.opt.rtp:prepend(lazypath)
 
-plugins = {
+local plugins = {
   'nvim-lualine/lualine.nvim',
-  'ryanoasis/vim-devicons',
-  'nvim-treesitter/nvim-treesitter',
+  'nvim-tree/nvim-web-devicons',
+  { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
+  'rebelot/kanagawa.nvim',
   'folke/tokyonight.nvim',
   'preservim/nerdtree',
 }
 
-opts = {
-
-}
-
-require("lazy").setup(plugins, opts)
+require("lazy").setup(plugins, {})
 
 require('lualine').setup {
   options = {
-    theme = 'tokyonight',
+    theme = 'kanagawa',
     icons_enabled = true,
     component_separators = '|',
     section_separators = '',
   }
 }
 
-vim.g.airline_theme = 'simple'
-vim.g.tokyonight_style = "storm" -- storm/night/day
-vim.g.tokyonight_italic_functions = true -- Включает/отключает курсив для функций (по умолчанию включено)
-vim.g.tokyonight_italic_comments = true -- Включает/отключает курсив для комментариев (по умолчанию включено)
-vim.g.tokyonight_sidebars = {"qf", "vista_kind", "terminal", "packer"} -- Список сайдбаров, которые будут иметь фоновый цвет темы
-vim.cmd [[colorscheme tokyonight]] -- Устанавливаем тему оформления
+vim.cmd [[colorscheme kanagawa-wave]]
+
