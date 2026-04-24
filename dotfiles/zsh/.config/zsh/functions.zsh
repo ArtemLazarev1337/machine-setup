@@ -1,4 +1,3 @@
 cheat() {
     curl "https://cheat.sh/$(echo "$@" | tr ' ' '+')"
 }
-
