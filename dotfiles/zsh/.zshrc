@@ -1,10 +1,10 @@
 [[ -r "$ZSH_CONFIG_DIR/instant-prompt.zsh" ]] && source "$ZSH_CONFIG_DIR/instant-prompt.zsh"
 
 for module in \
-  antidote \
-  p10k \
   history \
   completion \
+  antidote \
+  p10k \
   aliases \
   functions \
   integrations
