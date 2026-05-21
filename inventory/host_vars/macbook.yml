@@ -4,6 +4,7 @@ dotfiles_packages:
   - hushlogin
   - hammerspoon
   - iterm2
+  - ghostty
   - neovim
   - zsh
   - zed
