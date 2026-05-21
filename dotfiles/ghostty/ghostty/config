@@ -1,0 +1,44 @@
+# Theme
+theme = Kanagawa Wave
+background-opacity = 0.99
+
+# Font
+font-family = "FiraCode Nerd Font Mono"
+font-size = 20
+
+# Window
+window-save-state = always
+window-padding-x = 10
+window-padding-y = 8
+window-padding-balance = true
+background-blur-radius = 20
+confirm-close-surface = false
+quit-after-last-window-closed = false
+initial-window = false
+macos-titlebar-style = hidden
+
+# Mouse
+mouse-hide-while-typing = true
+
+# Ghostty
+auto-update = off
+
+# Env
+env=TERM=xterm-256color
+
+# Shell integration
+shell-integration-features = cursor,sudo,title
+
+# Keybinds
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+j=goto_split:down
+keybind = ctrl+k=goto_split:up
+keybind = ctrl+l=goto_split:right
+
+# Quick terminal
+keybind = global:cmd+backquote=toggle_quick_terminal
+quick-terminal-position = center
+quick-terminal-screen = mouse
+quick-terminal-size = 70%,80%
+quick-terminal-animation-duration = 0
+
